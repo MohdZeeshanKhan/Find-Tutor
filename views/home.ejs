@@ -1,0 +1,22 @@
+
+<%- include("partials/header"); -%>
+
+
+
+
+  <%  posts.forEach(function(post){ %>
+
+    <h3><%=post.title%></h3>
+
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <!-- <p>You Can email me  : <%=post.email%> </p> -->
+    <a href="/posts/<%=post._id%>">Read More</a>
+    </p>
+    
+
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>
